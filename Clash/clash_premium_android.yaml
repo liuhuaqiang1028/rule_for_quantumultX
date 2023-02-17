@@ -32,13 +32,14 @@ cfw-bypass:
     - <local>
 cfw-latency-timeout: 5000
 
-proxies:
-proxy-providers:
-  bityun:
+   proxies:
+   proxy-providers:
+
+  
     type: http
-    url: "订阅转换地址"
+    url: https://xm1122344.buzz/api/v1/client/subscribe?token=c8946059cd3a0272d4db626504fdcc90
     interval: 3600
-    path: ./bityun.yaml
+    path: .ProxyList.yaml
     health-check:
       enable: true
       interval: 600
@@ -48,7 +49,7 @@ proxy-groups:
   - name: 🔰 节点选择
     type: select
     use:
-      - bityun
+      
     proxies:
       - 🎯 全球直连
       - ♻️ 自动选择
@@ -57,7 +58,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
-      - bityun
+      
   - name: 🛑 小说广告
     type: select
     proxies:
